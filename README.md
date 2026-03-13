@@ -57,6 +57,30 @@ python setup_check.py
 
 This will verify that all components are properly configured before running the agent.
 
+## Git & GitHub Setup
+
+### Initial Git Setup
+
+```bash
+python git_setup.py
+```
+
+This script will:
+- Configure Git with your user information
+- Create a `.gitignore` file
+- Initialize the repository and make initial commit
+
+### Connect to GitHub
+
+1. Create a new repository on [GitHub.com](https://github.com)
+2. Run the connection script:
+
+```bash
+python github_connect.py
+```
+
+Follow the prompts to enter your repository URL and push your code to GitHub.
+
 ## Configuration
 
 Edit `config.py` to customize:
@@ -110,6 +134,8 @@ Add to crontab (`crontab -e`):
 naukri_agent/
 ├─ main.py              # Main entry point
 ├─ setup_check.py       # Setup verification script
+├─ git_setup.py         # Git repository setup script
+├─ github_connect.py    # GitHub connection script
 ├─ config.py            # Configuration settings
 ├─ login.py             # Login functionality
 ├─ resume_updater.py    # Resume upload and profile update
