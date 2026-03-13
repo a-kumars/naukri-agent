@@ -25,9 +25,15 @@ def test_browser():
             elif BROWSER_TYPE.lower() == "webkit":
                 browser = p.webkit.launch(headless=HEADLESS_MODE)
                 browser_name = "WebKit (Safari)"
+            elif BROWSER_TYPE.lower() == "chrome":
+                browser = p.chromium.launch(channel="chrome", headless=HEADLESS_MODE)
+                browser_name = "Google Chrome (System)"
+            elif BROWSER_TYPE.lower() == "edge":
+                browser = p.chromium.launch(channel="msedge", headless=HEADLESS_MODE)
+                browser_name = "Microsoft Edge (System)"
             else:
                 browser = p.chromium.launch(headless=HEADLESS_MODE)
-                browser_name = "Chromium"
+                browser_name = "Chromium (Bundled)"
 
             print(f"✅ {browser_name} browser launched successfully")
 
@@ -57,10 +63,14 @@ def test_browser():
 def show_browser_options():
     """Show available browser options"""
     print("🌐 Available Browser Options:")
-    print("• chromium - Google Chrome/Chromium (default, most compatible)")
-    print("• firefox - Mozilla Firefox (good alternative)")
-    print("• webkit - WebKit/Safari (limited compatibility)")
+    print("• chromium - Chromium (bundled, default, most compatible)")
+    print("• chrome   - Google Chrome (uses your installed Chrome)")
+    print("• edge     - Microsoft Edge (uses your installed Edge)")
+    print("• firefox  - Mozilla Firefox (bundled)")
+    print("• webkit   - WebKit/Safari (bundled, limited compatibility)")
     print()
+    print("💡 System browsers (chrome/edge) use your installed browsers")
+    print("💡 Bundled browsers work without installation")
     print("To change browser, edit BROWSER_TYPE in config.py")
 
 

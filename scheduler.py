@@ -36,6 +36,10 @@ def run_agent() -> bool:
                 browser = p.firefox.launch(headless=HEADLESS_MODE)
             elif BROWSER_TYPE.lower() == "webkit":
                 browser = p.webkit.launch(headless=HEADLESS_MODE)
+            elif BROWSER_TYPE.lower() == "chrome":
+                browser = p.chromium.launch(channel="chrome", headless=HEADLESS_MODE)
+            elif BROWSER_TYPE.lower() == "edge":
+                browser = p.chromium.launch(channel="msedge", headless=HEADLESS_MODE)
             else:
                 browser = p.chromium.launch(headless=HEADLESS_MODE)
 

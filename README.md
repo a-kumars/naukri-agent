@@ -100,8 +100,15 @@ Edit `config.py` to customize:
 - File paths (jobs CSV, resume file)
 
 **Browser Options:**
-- `BROWSER_TYPE`: Choose from "chromium", "firefox", or "webkit"
+- `BROWSER_TYPE`: Choose from "chromium", "chrome", "edge", "firefox", or "webkit"
 - `HEADLESS_MODE`: Set to False for testing to see browser actions
+
+**Browser Types:**
+- `chromium`: Bundled Chromium (default, most compatible)
+- `chrome`: Your installed Google Chrome
+- `edge`: Your installed Microsoft Edge
+- `firefox`: Bundled Firefox
+- `webkit`: Bundled WebKit/Safari
 
 Place your resume file in the `resume/` directory and update `RESUME_FILE_PATH` in `config.py`.
 
