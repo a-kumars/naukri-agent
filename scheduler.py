@@ -8,7 +8,7 @@ from login import NaukriLogin
 from resume_updater import ResumeUpdater
 from job_search import JobSearch
 from storage import JobStorage
-from config import HEADLESS_MODE
+from config import HEADLESS_MODE, BROWSER_TYPE
 
 logger = setup_logger(__name__)
 
@@ -31,8 +31,13 @@ def run_agent() -> bool:
     with sync_playwright() as p:
         try:
             # Launch browser
-            logger.info("Launching browser")
-            browser = p.chromium.launch(headless=HEADLESS_MODE)
+            logger.info(f"Launching {BROWSER_TYPE} browser (headless={HEADLESS_MODE})")
+            if BROWSER_TYPE.lower() == "firefox":
+                browser = p.firefox.launch(headless=HEADLESS_MODE)
+            elif BROWSER_TYPE.lower() == "webkit":
+                browser = p.webkit.launch(headless=HEADLESS_MODE)
+            else:
+                browser = p.chromium.launch(headless=HEADLESS_MODE)
 
             # Login
             login_handler = NaukriLogin(browser)

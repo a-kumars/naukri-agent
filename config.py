@@ -12,7 +12,8 @@ JOB_KEYWORDS = [
 ]
 
 # Browser settings
-HEADLESS_MODE = True
+HEADLESS_MODE = False  # Set to False for testing to see browser actions
+BROWSER_TYPE = "chromium"  # Options: "chromium", "firefox", "webkit"
 
 # URLs
 NAUKRI_BASE_URL = "https://www.naukri.com"

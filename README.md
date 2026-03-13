@@ -57,6 +57,16 @@ python setup_check.py
 
 This will verify that all components are properly configured before running the agent.
 
+## Browser Testing
+
+Test your selected browser before running the full agent:
+
+```bash
+python test_browser.py
+```
+
+This will test browser launch and basic navigation to ensure compatibility.
+
 ## Git & GitHub Setup
 
 ### Initial Git Setup
@@ -85,9 +95,13 @@ Follow the prompts to enter your repository URL and push your code to GitHub.
 
 Edit `config.py` to customize:
 - Job search keywords
-- Browser settings (headless mode)
+- Browser settings (headless mode, browser type)
 - Timeouts
 - File paths (jobs CSV, resume file)
+
+**Browser Options:**
+- `BROWSER_TYPE`: Choose from "chromium", "firefox", or "webkit"
+- `HEADLESS_MODE`: Set to False for testing to see browser actions
 
 Place your resume file in the `resume/` directory and update `RESUME_FILE_PATH` in `config.py`.
 
@@ -134,6 +148,7 @@ Add to crontab (`crontab -e`):
 naukri_agent/
 ├─ main.py              # Main entry point
 ├─ setup_check.py       # Setup verification script
+├─ test_browser.py      # Browser compatibility test
 ├─ git_setup.py         # Git repository setup script
 ├─ github_connect.py    # GitHub connection script
 ├─ config.py            # Configuration settings
