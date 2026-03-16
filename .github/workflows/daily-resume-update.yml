@@ -1,5 +1,7 @@
 name: Daily Resume Update
 
+# Updated workflow for cloud automation
+
 on:
   schedule:
     # Run daily at 7 AM UTC (adjust timezone as needed)
