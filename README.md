@@ -112,11 +112,32 @@ Edit `config.py` to customize:
 
 Place your resume file in the `resume/` directory and update `RESUME_FILE_PATH` in `config.py`.
 
-## How to Run
+### Automated Daily Scheduling
+
+For automatic resume updates, use the daily scheduler that runs at 6:30 AM and 7:00 PM:
+
+```bash
+python daily_scheduler.py
+```
+
+Or use the Windows batch file:
+```bash
+start_scheduler.bat
+```
+
+**What the daily scheduler does:**
+- Runs automatically at 6:30 AM and 7:00 PM every day
+- Only performs resume upload (no job search)
+- Closes browser immediately after upload
+- Logs all activities to `logs/` directory
+
+**To run as a background service:**
+- On Windows: Use Task Scheduler to run `start_scheduler.bat` at startup
+- On Linux/Mac: Use systemd/cron to run `python daily_scheduler.py`
 
 ### Manual Execution
 
-Run the main script:
+Run the main script for full functionality (login + resume + job search):
 ```bash
 python main.py
 ```

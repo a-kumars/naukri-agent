@@ -1,5 +1,5 @@
 """
-Login module for Naukri Agent
+Login module for Naukri Agent - Enhanced with better error detection
 """
 
 import os
@@ -149,11 +149,8 @@ class NaukriLogin:
             login_button.click()
 
             # Wait for navigation after login
-            page.wait_for_load_state("networkidle", timeout=10000)
+            page.wait_for_load_state("networkidle")
             logger.info(f"After login, current URL: {page.url}")
-
-            # Additional wait for dynamic content
-            page.wait_for_timeout(3000)
 
             # Check for login failure indicators
             failure_indicators = [
@@ -170,6 +167,21 @@ class NaukriLogin:
             ]
 
             login_failed = False
+            error_message = ""
+
+            # Try to capture error messages
+            try:
+                error_elements = page.query_selector_all('.error, .err, [class*="error"], [class*="err"]')
+                for elem in error_elements:
+                    if elem.is_visible():
+                        text = elem.text_content().strip()
+                        if text:
+                            error_message += f" {text}"
+                            logger.warning(f"Found error message: {text}")
+            except:
+                pass
+
+            # Check for specific error text patterns
             for indicator in failure_indicators:
                 try:
                     if page.locator(indicator).is_visible():
@@ -184,16 +196,48 @@ class NaukriLogin:
                 login_failed = True
                 logger.warning("Still on login page after attempted login")
 
+            if login_failed:
+                # Take screenshot for debugging
+                page.screenshot(path="debug_login_failed.png")
+                logger.info("Screenshot saved as debug_login_failed.png")
+
+                # Log the page title and any visible text that might indicate the issue
+                title = page.title()
+                logger.info(f"Page title after login attempt: {title}")
+
+                # Try to get any alert or modal text
+                try:
+                    alert_text = page.evaluate("""
+                        () => {
+                            const alerts = document.querySelectorAll('.alert, .modal, .popup, [role="alert"]');
+                            let text = '';
+                            alerts.forEach(alert => {
+                                if (alert.offsetParent !== null) { // visible
+                                    text += alert.textContent.trim() + ' ';
+                                }
+                            });
+                            return text.trim();
+                        }
+                    """)
+                    if alert_text:
+                        error_message += f" Alert: {alert_text}"
+                        logger.warning(f"Found alert/modal text: {alert_text}")
+                except:
+                    pass
+
+                if error_message:
+                    raise Exception(f"Login failed: {error_message.strip()}")
+                else:
+                    raise Exception("Login failed. Please check credentials or account status.")
+
             # Check for successful login indicators
             success_indicators = [
                 'text="Dashboard"',
                 'text="Profile"',
                 'text="My Naukri"',
-                'text="Home"',
                 '.user-menu',
                 '.profile-link',
-                '[data-testid*="profile"]',
-                'text="Mynaukri"'
+                '[data-testid*="profile"]'
             ]
 
             login_successful = False
@@ -206,9 +250,7 @@ class NaukriLogin:
                 except:
                     continue
 
-            if login_failed:
-                raise Exception("Login failed. Please check credentials or account status.")
-            elif login_successful:
+            if login_successful:
                 logger.info("Login successful - found success indicators")
             else:
                 logger.info("Login completed - no clear success/failure indicators found, proceeding...")

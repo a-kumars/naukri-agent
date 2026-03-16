@@ -33,8 +33,36 @@ class ResumeUpdater:
             logger.info(f"Navigating to profile page: {NAUKRI_PROFILE_URL}")
             page.goto(NAUKRI_PROFILE_URL)
 
-            # Wait for page to load
+            # Wait for page to load completely
             page.wait_for_load_state("networkidle")
+            logger.info("Profile page loaded, waiting for resume section...")
+
+            # Wait for resume section to be visible (may need scrolling)
+            resume_section_selectors = [
+                '#resume360',  # Found in inspection
+                '.resume-name-inline',
+                '[class*="resume"]',
+                'text="Resume"'
+            ]
+
+            resume_section_found = False
+            for selector in resume_section_selectors:
+                try:
+                    page.wait_for_selector(selector, timeout=10000)
+                    logger.info(f"Resume section found with selector: {selector}")
+                    resume_section_found = True
+
+                    # Scroll to the resume section
+                    element = page.locator(selector).first
+                    element.scroll_into_view_if_needed()
+                    page.wait_for_timeout(2000)  # Wait for scroll to complete
+                    break
+                except:
+                    continue
+
+            if not resume_section_found:
+                logger.warning("Resume section not found on profile page")
+                return False
 
             # First, try to upload resume if file exists
             resume_uploaded = self._upload_resume_file(page)
@@ -75,8 +103,9 @@ class ResumeUpdater:
 
             logger.info(f"Uploading resume file: {RESUME_FILE_PATH}")
 
-            # Look for resume upload elements
+            # Look for resume upload elements - use specific selector found during inspection
             upload_selectors = [
+                '#attachCV',  # Specific selector found during profile inspection
                 'input[type="file"]',
                 '.resume-upload input[type="file"]',
                 '[data-testid="resume-upload"] input[type="file"]',
@@ -86,11 +115,16 @@ class ResumeUpdater:
             file_input = None
             for selector in upload_selectors:
                 try:
+                    logger.info(f"Trying file input selector: {selector}")
                     page.wait_for_selector(selector, timeout=5000)
                     file_input = page.locator(selector).first
                     if file_input.is_visible():
+                        logger.info(f"Found visible file input with selector: {selector}")
                         break
-                except:
+                    else:
+                        logger.warning(f"File input found but not visible: {selector}")
+                except Exception as e:
+                    logger.debug(f"Selector {selector} not found: {e}")
                     continue
 
             if not file_input:
@@ -194,8 +228,9 @@ class ResumeUpdater:
             # Wait for edit mode to load
             page.wait_for_load_state("networkidle")
 
-            # Look for save button
+            # Look for save button - include Update links found during inspection
             save_selectors = [
+                'a:has-text("Update")',  # Specific Update links found during inspection
                 'button:has-text("Save")',
                 'button:has-text("Update")',
                 '.save-btn',

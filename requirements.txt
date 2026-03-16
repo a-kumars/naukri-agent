@@ -1,3 +1,5 @@
 playwright
 python-dotenv
 pandas
+schedule
+PyPDF2

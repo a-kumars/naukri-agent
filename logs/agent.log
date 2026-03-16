@@ -1,0 +1,290 @@
+2026-03-13 18:18:23,328 - __main__ - INFO - Launching browser...
+2026-03-13 18:52:25,444 - __main__ - INFO - Launching browser...
+2026-03-13 18:52:38,399 - __main__ - INFO - Launching chrome browser (headless=False)
+2026-03-13 18:52:38,620 - __main__ - INFO - Logging into Naukri...
+2026-03-13 18:52:38,634 - login - INFO - Starting Naukri login process
+2026-03-13 18:52:39,103 - login - INFO - Navigating to login page: https://www.naukri.com/nlogin/login
+2026-03-13 18:52:41,192 - login - INFO - Filling email field
+2026-03-13 18:52:51,206 - login - ERROR - Login failed: Page.wait_for_selector: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator("input[placeholder*=\"email\"]") to be visible
+
+2026-03-13 18:53:11,057 - __main__ - INFO - Launching chrome browser (headless=False)
+2026-03-13 18:53:11,291 - __main__ - INFO - Logging into Naukri...
+2026-03-13 18:53:11,301 - login - INFO - Starting Naukri login process
+2026-03-13 18:53:11,782 - login - INFO - Navigating to login page: https://www.naukri.com/nlogin/login
+2026-03-13 18:53:14,102 - login - INFO - Filling email field
+2026-03-13 18:53:16,130 - login - INFO - Found email input with selector: input[placeholder*="Email"]
+2026-03-13 18:53:16,153 - login - INFO - Filling password field
+2026-03-13 18:53:16,168 - login - INFO - Found password input with selector: input[type="password"]
+2026-03-13 18:53:16,192 - login - INFO - Clicking login button
+2026-03-13 18:53:16,241 - login - INFO - Found login button with selector: button[type="submit"]
+2026-03-13 18:53:16,341 - login - ERROR - Login failed: Login failed. Please check credentials.
+2026-03-13 18:53:56,044 - __main__ - INFO - Launching chrome browser (headless=False)
+2026-03-13 18:53:56,292 - __main__ - INFO - Logging into Naukri...
+2026-03-13 18:53:56,327 - login - INFO - Starting Naukri login process
+2026-03-13 18:53:56,614 - login - INFO - Navigating to login page: https://www.naukri.com/nlogin/login
+2026-03-13 18:53:58,713 - login - INFO - Filling email field
+2026-03-13 18:54:00,749 - login - INFO - Found email input with selector: input[placeholder*="Email"]
+2026-03-13 18:54:00,770 - login - INFO - Filling password field
+2026-03-13 18:54:00,828 - login - INFO - Found password input with selector: input[type="password"]
+2026-03-13 18:54:00,863 - login - INFO - Clicking login button
+2026-03-13 18:54:00,896 - login - INFO - Found login button with selector: button[type="submit"]
+2026-03-13 18:54:00,980 - login - INFO - After login, current URL: https://www.naukri.com/nlogin/login
+2026-03-13 18:54:01,027 - login - WARNING - Still on login page after attempted login
+2026-03-13 18:54:01,053 - login - ERROR - Login failed: Login failed. Please check credentials or account status.
+2026-03-13 18:55:23,489 - __main__ - INFO - Launching chrome browser (headless=False)
+2026-03-13 18:55:23,770 - __main__ - INFO - Logging into Naukri...
+2026-03-13 18:55:23,784 - login_enhanced - INFO - Starting Naukri login process
+2026-03-13 18:55:24,024 - login_enhanced - INFO - Navigating to login page: https://www.naukri.com/nlogin/login
+2026-03-13 18:55:26,089 - login_enhanced - INFO - Filling email field
+2026-03-13 18:55:28,158 - login_enhanced - INFO - Found email input with selector: input[placeholder*="Email"]
+2026-03-13 18:55:28,179 - login_enhanced - INFO - Filling password field
+2026-03-13 18:55:28,191 - login_enhanced - INFO - Found password input with selector: input[type="password"]
+2026-03-13 18:55:28,208 - login_enhanced - INFO - Clicking login button
+2026-03-13 18:55:28,254 - login_enhanced - INFO - Found login button with selector: button[type="submit"]
+2026-03-13 18:55:28,330 - login_enhanced - INFO - After login, current URL: https://www.naukri.com/nlogin/login
+2026-03-13 18:55:28,381 - login_enhanced - WARNING - Still on login page after attempted login
+2026-03-13 18:55:28,617 - login_enhanced - INFO - Screenshot saved as debug_login_failed.png
+2026-03-13 18:55:28,619 - login_enhanced - INFO - Page title after login attempt: Jobseeker's Login: Search the Best Jobs available in India & Abroad - Naukri.com
+2026-03-13 18:55:28,623 - login_enhanced - ERROR - Login failed: Login failed. Please check credentials or account status.
+2026-03-13 18:56:14,111 - __main__ - INFO - Starting detailed login debug
+2026-03-13 18:58:04,357 - __main__ - INFO - Starting detailed login debug
+2026-03-13 18:58:06,005 - __main__ - INFO - Navigating to: https://www.naukri.com/nlogin/login
+2026-03-13 18:58:08,476 - __main__ - INFO - Initial page screenshot saved
+2026-03-13 18:58:08,508 - __main__ - INFO - Found 5 input elements:
+2026-03-13 18:58:08,536 - __main__ - INFO -   Input 0: type=text, placeholder='Enter keyword / designation / companies', name='', id=''
+2026-03-13 18:58:08,551 - __main__ - INFO -   Input 1: type=text, placeholder='Select experience', name='experienceDD', id='experienceDD'
+2026-03-13 18:58:08,564 - __main__ - INFO -   Input 2: type=text, placeholder='Enter location', name='', id=''
+2026-03-13 18:58:08,579 - __main__ - INFO -   Input 3: type=text, placeholder='Enter Email ID / Username', name='', id='usernameField'
+2026-03-13 18:58:08,593 - __main__ - INFO -   Input 4: type=password, placeholder='Enter Password', name='', id='passwordField'
+2026-03-13 18:58:08,597 - __main__ - INFO - Filling email field
+2026-03-13 18:58:09,639 - __main__ - INFO - Filling password field
+2026-03-13 18:58:10,829 - __main__ - INFO - Screenshot before login click saved
+2026-03-13 18:58:10,834 - __main__ - INFO - Clicking login button
+2026-03-13 18:58:16,106 - __main__ - INFO - Screenshot after login click saved
+2026-03-13 18:58:16,107 - __main__ - INFO - Current URL after login: https://www.naukri.com/mnjuser/homepage
+2026-03-13 18:58:16,109 - __main__ - INFO - Page title: Home | Mynaukri
+2026-03-13 18:58:16,146 - __main__ - INFO - Page text saved to debug_page_text.txt
+2026-03-13 18:58:16,179 - __main__ - WARNING - Found potential error patterns: ['error']
+2026-03-13 18:58:16,240 - __main__ - INFO - No CAPTCHA elements detected
+2026-03-13 18:59:08,175 - __main__ - INFO - Launching chrome browser (headless=False)
+2026-03-13 18:59:08,416 - __main__ - INFO - Logging into Naukri...
+2026-03-13 18:59:08,434 - login_enhanced - INFO - Starting Naukri login process
+2026-03-13 18:59:08,808 - login_enhanced - INFO - Navigating to login page: https://www.naukri.com/nlogin/login
+2026-03-13 18:59:10,856 - login_enhanced - INFO - Filling email field
+2026-03-13 18:59:12,937 - login_enhanced - INFO - Found email input with selector: input[placeholder*="Email"]
+2026-03-13 18:59:12,967 - login_enhanced - INFO - Filling password field
+2026-03-13 18:59:12,981 - login_enhanced - INFO - Found password input with selector: input[type="password"]
+2026-03-13 18:59:12,998 - login_enhanced - INFO - Clicking login button
+2026-03-13 18:59:13,034 - login_enhanced - INFO - Found login button with selector: button[type="submit"]
+2026-03-13 18:59:13,121 - login_enhanced - INFO - After login, current URL: https://www.naukri.com/nlogin/login
+2026-03-13 18:59:13,167 - login_enhanced - WARNING - Still on login page after attempted login
+2026-03-13 18:59:13,526 - login_enhanced - INFO - Screenshot saved as debug_login_failed.png
+2026-03-13 18:59:13,529 - login_enhanced - INFO - Page title after login attempt: 
+2026-03-13 18:59:13,532 - login_enhanced - ERROR - Login failed: Login failed. Please check credentials or account status.
+2026-03-13 18:59:24,871 - __main__ - INFO - Launching chrome browser (headless=False)
+2026-03-13 18:59:25,097 - __main__ - INFO - Logging into Naukri...
+2026-03-13 18:59:25,113 - login - INFO - Starting Naukri login process
+2026-03-13 18:59:25,407 - login - INFO - Navigating to login page: https://www.naukri.com/nlogin/login
+2026-03-13 18:59:27,825 - login - INFO - Filling email field
+2026-03-13 18:59:29,906 - login - INFO - Found email input with selector: input[placeholder*="Email"]
+2026-03-13 18:59:29,929 - login - INFO - Filling password field
+2026-03-13 18:59:29,946 - login - INFO - Found password input with selector: input[type="password"]
+2026-03-13 18:59:29,964 - login - INFO - Clicking login button
+2026-03-13 18:59:29,995 - login - INFO - Found login button with selector: button[type="submit"]
+2026-03-13 18:59:30,084 - login - INFO - After login, current URL: https://www.naukri.com/nlogin/login
+2026-03-13 18:59:33,332 - login - INFO - Login completed - no clear success/failure indicators found, proceeding...
+2026-03-13 18:59:33,332 - __main__ - INFO - Uploading resume...
+2026-03-13 18:59:33,368 - resume_updater - INFO - Uploading resume file: resume/Pragati Potadar_Resume (1).pdf
+2026-03-13 19:00:13,432 - resume_updater - WARNING - Resume upload input not found
+2026-03-13 19:01:23,019 - __main__ - INFO - Starting profile page inspection
+2026-03-13 19:01:24,020 - __main__ - INFO - Navigating to login page: https://www.naukri.com/nlogin/login
+2026-03-13 19:01:26,263 - __main__ - INFO - Logging in...
+2026-03-13 19:01:29,490 - __main__ - INFO - After login, URL: https://www.naukri.com/mnjuser/homepage
+2026-03-13 19:01:29,492 - __main__ - INFO - Navigating to profile page...
+2026-03-13 19:02:49,793 - __main__ - INFO - Starting profile page inspection
+2026-03-13 19:02:50,931 - __main__ - INFO - Navigating to login page: https://www.naukri.com/nlogin/login
+2026-03-13 19:02:53,381 - __main__ - INFO - Logging in...
+2026-03-13 19:02:56,612 - __main__ - INFO - After login, URL: https://www.naukri.com/mnjuser/homepage
+2026-03-13 19:02:56,613 - __main__ - INFO - Navigating to profile page...
+2026-03-13 19:03:27,215 - __main__ - WARNING - Profile page load timed out: Timeout 30000ms exceeded.
+2026-03-13 19:03:29,242 - __main__ - INFO - Profile page URL: https://www.naukri.com/mnjuser/profile
+2026-03-13 19:03:29,281 - __main__ - INFO - Profile page title: Profile | Mynaukri
+2026-03-13 19:03:29,582 - __main__ - INFO - Profile page screenshot saved
+2026-03-13 19:03:29,582 - __main__ - INFO - Looking for resume navigation elements...
+2026-03-13 19:03:29,673 - __main__ - INFO - Found 11 elements with selector: a:has-text("Resume")
+2026-03-13 19:03:29,747 - __main__ - INFO -   Element 0: text='Resume writing', href=''
+2026-03-13 19:03:29,778 - __main__ - INFO -   Element 1: text='Text resume', href='https://resume.naukri.com/resume-writing-services?fftid=101001'
+2026-03-13 19:03:29,826 - __main__ - INFO -   Element 2: text='Visual resume', href='https://resume.naukri.com/visual-resume-writing-services?fftid=101002'
+2026-03-13 19:03:29,908 - __main__ - INFO - Found 3 elements with selector: [class*="resume"]
+2026-03-13 19:03:29,998 - __main__ - INFO -   Element 0: text='Pragati Potadar_Resume 1.pdf', href=''
+2026-03-13 19:03:30,066 - __main__ - INFO -   Element 1: text='Resume headlineeditOneThemeTechnical Process Specialist with 3+ years of experience in ServiceNow Administration, ITSM, and ITIL Process Management.', href=''
+2026-03-13 19:03:30,109 - __main__ - INFO -   Element 2: text='CrossLayer', href=''
+2026-03-13 19:03:30,146 - __main__ - INFO - Found 2 elements with selector: text="Resume"
+2026-03-13 19:03:30,198 - __main__ - INFO -   Element 0: text='Resume', href=''
+2026-03-13 19:03:30,263 - __main__ - INFO -   Element 1: text='Resume', href=''
+2026-03-13 19:03:30,284 - __main__ - INFO - Looking for Update button/link...
+2026-03-13 19:03:30,315 - __main__ - INFO - Found 2 Update elements with selector: a:has-text("Update")
+2026-03-13 19:03:30,349 - __main__ - ERROR - Error checking Update selector a:has-text("Update"): 'ElementHandle' object has no attribute 'tag_name'
+2026-03-13 19:03:30,397 - __main__ - INFO - Found 1 Update elements with selector: [class*="update"]
+2026-03-13 19:03:30,416 - __main__ - ERROR - Error checking Update selector [class*="update"]: 'ElementHandle' object has no attribute 'tag_name'
+2026-03-13 19:03:30,481 - __main__ - INFO - Found 1 Update elements with selector: text="Update"
+2026-03-13 19:03:30,486 - __main__ - ERROR - Error checking Update selector text="Update": 'ElementHandle' object has no attribute 'tag_name'
+2026-03-13 19:03:30,491 - __main__ - WARNING - No Update button found under resume section
+2026-03-13 19:03:30,540 - __main__ - INFO - Found 14 input elements on profile page:
+2026-03-13 19:03:30,646 - __main__ - INFO -   Input 0: type=text, placeholder='Enter keyword / designation / companies', name='', id='', class='suggestor-input '
+2026-03-13 19:03:30,715 - __main__ - INFO -   Input 1: type=text, placeholder='Select experience', name='experienceDD', id='experienceDD', class='ddInput nonSearched'
+2026-03-13 19:03:30,829 - __main__ - INFO -   Input 2: type=text, placeholder='Enter location', name='', id='', class='suggestor-input '
+2026-03-13 19:03:30,892 - __main__ - INFO -   Input 3: type=file, placeholder='', name='', id='attachCV', class='fileUpload waves-effect waves-light btn-large'
+2026-03-13 19:03:30,987 - __main__ - INFO -   Input 4: type=button, placeholder='', name='', id='', class='dummyUpload typ-14Bold'
+2026-03-13 19:03:31,143 - __main__ - INFO -   Input 5: type=file, placeholder='', name='Fjb56fnotys359[USOgkKDFCosECP]', id='fileUpload', class='fileUpload waves-effect waves-light btn-large'
+2026-03-13 19:03:31,264 - __main__ - INFO -   Input 6: type=hidden, placeholder='', name='ncUploaderPicUrl', id='ncUploaderPicUrl', class=''
+2026-03-13 19:03:31,401 - __main__ - INFO -   Input 7: type=button, placeholder='', name='', id='', class='btn-dark-ot'
+2026-03-13 19:03:31,445 - __main__ - INFO -   Input 8: type=hidden, placeholder='', name='x1', id='x1', class=''
+2026-03-13 19:03:31,639 - __main__ - INFO -   Input 9: type=hidden, placeholder='', name='y1', id='y1', class=''
+2026-03-13 19:03:31,697 - __main__ - INFO -   Input 10: type=hidden, placeholder='', name='x2', id='x2', class=''
+2026-03-13 19:03:31,762 - __main__ - INFO -   Input 11: type=hidden, placeholder='', name='y2', id='y2', class=''
+2026-03-13 19:03:31,820 - __main__ - INFO -   Input 12: type=button, placeholder='', name='', id='', class='btn greyBtn btnSpc no'
+2026-03-13 19:03:31,873 - __main__ - INFO -   Input 13: type=button, placeholder='', name='', id='', class='btn btnSpc yes'
+2026-03-13 19:03:31,893 - __main__ - INFO - Found 2 file input elements:
+2026-03-13 19:03:31,958 - __main__ - INFO -   File Input 0: id='attachCV', name='', class='fileUpload waves-effect waves-light btn-large', accept=''
+2026-03-13 19:03:31,999 - __main__ - INFO -   File Input 1: id='fileUpload', name='Fjb56fnotys359[USOgkKDFCosECP]', class='fileUpload waves-effect waves-light btn-large', accept='image/*'
+2026-03-13 19:03:32,037 - __main__ - INFO - Found 7 button elements:
+2026-03-13 19:03:32,097 - __main__ - INFO -   Button 0: text='', id='', class='nI-gNb-sb__icon-wrapper'
+2026-03-13 19:03:32,136 - __main__ - INFO -   Button 1: text='Become a Pro | 25% off', id='', class='pro-button'
+2026-03-13 19:03:32,158 - __main__ - INFO -   Button 2: text='Download', id='', class='blue-text waves-effect waves-teal btn-flat'
+2026-03-13 19:03:32,199 - __main__ - INFO -   Button 3: text='Delete', id='', class='typ-14Bold delBtn'
+2026-03-13 19:03:32,245 - __main__ - INFO -   Button 4: text='Save photo', id='submit', class='btn-dark-ot save-photo'
+2026-03-13 19:03:32,293 - __main__ - INFO -   Button 5: text='Delete', id='', class='btn-dark-ot'
+2026-03-13 19:03:32,331 - __main__ - INFO -   Button 6: text='Delete', id='', class='btn-dark-ot'
+2026-03-13 19:03:32,381 - __main__ - INFO - Found 13 elements with resume/upload in class/id:
+2026-03-13 19:03:32,442 - __main__ - INFO -   Element 0: tag=DIV, id='', class='resume-name-inline', text='Pragati Potadar_Resume 1.pdf'
+2026-03-13 19:03:32,493 - __main__ - INFO -   Element 1: tag=DIV, id='resume360', class='naukri-wdgt-section', text=''
+2026-03-13 19:03:32,541 - __main__ - INFO -   Element 2: tag=DIV, id='resume360.inventory-1', class='', text=''
+2026-03-13 19:03:32,589 - __main__ - INFO -   Element 3: tag=DIV, id='', class='uploadCont ', text='DownloadSupported Formats: doc, docx, rtf, pdf, upto 2 MB'
+2026-03-13 19:03:32,624 - __main__ - INFO -   Element 4: tag=DIV, id='', class='uploadBtn', text='Download'
+2026-03-13 19:03:32,673 - __main__ - INFO -   Element 5: tag=DIV, id='', class='uploadContainer', text=''
+2026-03-13 19:03:32,778 - __main__ - INFO -   Element 6: tag=UL, id='results_resumeParser', class='', text=''
+2026-03-13 19:03:32,844 - __main__ - INFO -   Element 7: tag=DIV, id='lazyResumeHead', class='resumeHeadline', text='Resume headlineeditOneThemeTechnical Process Specialist with 3+ years of experience in ServiceNow Ad'
+2026-03-13 19:03:32,892 - __main__ - INFO -   Element 8: tag=DIV, id='photoCropper', class='photo-uploader-component  state changePhoto leave-active', text='CrossLayerProfile photo uploador DeleteSupported file format: png, jpg, jpeg, gif - upto 2MBTerms of'
+2026-03-13 19:03:32,932 - __main__ - INFO -   Element 9: tag=SECTION, id='', class='pageC uploadImagePage', text='or Delete'
+2026-03-13 19:03:32,982 - __main__ - INFO - Profile page HTML saved to debug_profile_page.html
+2026-03-13 19:04:27,155 - __main__ - INFO - Launching chrome browser (headless=False)
+2026-03-13 19:04:27,361 - __main__ - INFO - Logging into Naukri...
+2026-03-13 19:04:27,368 - login - INFO - Starting Naukri login process
+2026-03-13 19:04:27,681 - login - INFO - Navigating to login page: https://www.naukri.com/nlogin/login
+2026-03-13 19:04:29,668 - login - INFO - Filling email field
+2026-03-13 19:04:31,729 - login - INFO - Found email input with selector: input[placeholder*="Email"]
+2026-03-13 19:04:31,750 - login - INFO - Filling password field
+2026-03-13 19:04:31,763 - login - INFO - Found password input with selector: input[type="password"]
+2026-03-13 19:04:31,780 - login - INFO - Clicking login button
+2026-03-13 19:04:31,815 - login - INFO - Found login button with selector: button[type="submit"]
+2026-03-13 19:04:31,930 - login - INFO - After login, current URL: https://www.naukri.com/nlogin/login
+2026-03-13 19:04:35,181 - login - INFO - Login completed - no clear success/failure indicators found, proceeding...
+2026-03-13 19:04:35,181 - __main__ - INFO - Uploading resume...
+2026-03-13 19:04:35,181 - resume_updater - INFO - Starting resume update process
+2026-03-13 19:04:35,210 - resume_updater - INFO - Navigating to profile page: https://www.naukri.com/mnjuser/profile
+2026-03-13 19:04:38,029 - resume_updater - INFO - Uploading resume file: resume/Pragati Potadar_Resume (1).pdf
+2026-03-13 19:04:58,211 - resume_updater - INFO - Resume file upload completed (no explicit success message)
+2026-03-13 19:04:58,211 - resume_updater - INFO - Updating profile information
+2026-03-13 19:05:13,276 - resume_updater - INFO - Clicking edit button
+2026-03-13 19:05:33,346 - resume_updater - WARNING - Save button not found. Assuming update is not needed.
+2026-03-13 19:05:33,360 - resume_updater - INFO - Resume update completed successfully
+2026-03-13 19:05:56,210 - __main__ - INFO - Launching chrome browser (headless=False)
+2026-03-13 19:05:56,412 - __main__ - INFO - Logging into Naukri...
+2026-03-13 19:05:56,415 - login - INFO - Starting Naukri login process
+2026-03-13 19:05:56,659 - login - INFO - Navigating to login page: https://www.naukri.com/nlogin/login
+2026-03-13 19:05:58,855 - login - INFO - Filling email field
+2026-03-13 19:06:00,885 - login - INFO - Found email input with selector: input[placeholder*="Email"]
+2026-03-13 19:06:00,905 - login - INFO - Filling password field
+2026-03-13 19:06:00,923 - login - INFO - Found password input with selector: input[type="password"]
+2026-03-13 19:06:00,945 - login - INFO - Clicking login button
+2026-03-13 19:06:01,001 - login - INFO - Found login button with selector: button[type="submit"]
+2026-03-13 19:06:01,089 - login - INFO - After login, current URL: https://www.naukri.com/nlogin/login
+2026-03-13 19:06:04,281 - login - INFO - Login completed - no clear success/failure indicators found, proceeding...
+2026-03-13 19:06:04,283 - __main__ - INFO - Uploading resume...
+2026-03-13 19:06:04,283 - resume_updater - INFO - Starting resume update process
+2026-03-13 19:06:04,312 - resume_updater - INFO - Navigating to profile page: https://www.naukri.com/mnjuser/profile
+2026-03-13 19:06:06,732 - resume_updater - INFO - Profile page loaded, waiting for resume section...
+2026-03-13 19:06:16,772 - resume_updater - INFO - Resume section found with selector: .resume-name-inline
+2026-03-13 19:06:18,898 - resume_updater - INFO - Uploading resume file: resume/Pragati Potadar_Resume (1).pdf
+2026-03-13 19:06:18,900 - resume_updater - INFO - Trying file input selector: #attachCV
+2026-03-13 19:06:18,923 - resume_updater - INFO - Found visible file input with selector: #attachCV
+2026-03-13 19:06:39,022 - resume_updater - INFO - Resume file upload completed (no explicit success message)
+2026-03-13 19:06:39,023 - resume_updater - INFO - Updating profile information
+2026-03-13 19:06:54,078 - resume_updater - INFO - Clicking edit button
+2026-03-13 19:06:59,503 - resume_updater - WARNING - Save button not found. Assuming update is not needed.
+2026-03-13 19:06:59,505 - resume_updater - INFO - Resume update completed successfully
+2026-03-13 19:09:12,700 - scheduler - INFO - Starting scheduled resume-only agent execution
+2026-03-13 19:09:13,404 - scheduler - INFO - Launching chrome browser (headless=False)
+2026-03-13 19:09:13,652 - login - INFO - Starting Naukri login process
+2026-03-13 19:09:13,933 - login - INFO - Navigating to login page: https://www.naukri.com/nlogin/login
+2026-03-13 19:09:15,827 - login - INFO - Filling email field
+2026-03-13 19:09:17,904 - login - INFO - Found email input with selector: input[placeholder*="Email"]
+2026-03-13 19:09:17,932 - login - INFO - Filling password field
+2026-03-13 19:09:17,946 - login - INFO - Found password input with selector: input[type="password"]
+2026-03-13 19:09:17,963 - login - INFO - Clicking login button
+2026-03-13 19:09:18,003 - login - INFO - Found login button with selector: button[type="submit"]
+2026-03-13 19:09:18,093 - login - INFO - After login, current URL: https://www.naukri.com/nlogin/login
+2026-03-13 19:09:21,250 - login - INFO - Login completed - no clear success/failure indicators found, proceeding...
+2026-03-13 19:09:21,250 - scheduler - INFO - Updating resume (scheduled task)
+2026-03-13 19:09:21,250 - resume_updater - INFO - Starting resume update process
+2026-03-13 19:09:21,286 - resume_updater - INFO - Navigating to profile page: https://www.naukri.com/mnjuser/profile
+2026-03-13 19:09:24,279 - resume_updater - INFO - Profile page loaded, waiting for resume section...
+2026-03-13 19:09:34,307 - resume_updater - INFO - Resume section found with selector: .resume-name-inline
+2026-03-13 19:09:36,412 - resume_updater - INFO - Uploading resume file: resume/Pragati Potadar_Resume (1).pdf
+2026-03-13 19:09:36,412 - resume_updater - INFO - Trying file input selector: #attachCV
+2026-03-13 19:09:36,424 - resume_updater - INFO - Found visible file input with selector: #attachCV
+2026-03-13 19:09:56,505 - resume_updater - INFO - Resume file upload completed (no explicit success message)
+2026-03-13 19:09:56,505 - resume_updater - INFO - Updating profile information
+2026-03-13 19:10:11,554 - resume_updater - INFO - Clicking edit button
+2026-03-13 19:10:38,098 - resume_updater - WARNING - Save button not found. Assuming update is not needed.
+2026-03-13 19:10:38,098 - resume_updater - INFO - Resume update completed successfully
+2026-03-13 19:10:38,128 - scheduler - INFO - Resume update completed successfully
+2026-03-13 19:10:38,130 - scheduler - INFO - Closing browser after resume update
+2026-03-13 19:12:12,615 - scheduler - INFO - Starting scheduled resume-only agent execution
+2026-03-13 19:12:13,362 - scheduler - INFO - Launching chrome browser (headless=False)
+2026-03-13 19:12:13,565 - login - INFO - Starting Naukri login process
+2026-03-13 19:12:13,810 - login - INFO - Navigating to login page: https://www.naukri.com/nlogin/login
+2026-03-13 19:12:15,916 - login - INFO - Filling email field
+2026-03-13 19:12:17,947 - login - INFO - Found email input with selector: input[placeholder*="Email"]
+2026-03-13 19:12:17,977 - login - INFO - Filling password field
+2026-03-13 19:12:17,993 - login - INFO - Found password input with selector: input[type="password"]
+2026-03-13 19:12:18,017 - login - INFO - Clicking login button
+2026-03-13 19:12:18,056 - login - INFO - Found login button with selector: button[type="submit"]
+2026-03-13 19:12:18,160 - login - INFO - After login, current URL: https://www.naukri.com/nlogin/login
+2026-03-13 19:12:21,401 - login - INFO - Login completed - no clear success/failure indicators found, proceeding...
+2026-03-13 19:12:21,401 - scheduler - INFO - Updating resume (scheduled task)
+2026-03-13 19:12:21,436 - scheduler - INFO - Navigating to profile page: https://www.naukri.com/mnjuser/profile
+2026-03-13 19:12:23,861 - scheduler - INFO - Profile page loaded, waiting for resume section...
+2026-03-13 19:12:33,930 - scheduler - INFO - Resume section found with selector: .resume-name-inline
+2026-03-13 19:12:36,031 - resume_updater - INFO - Uploading resume file: resume/Pragati Potadar_Resume (1).pdf
+2026-03-13 19:12:36,032 - resume_updater - INFO - Trying file input selector: #attachCV
+2026-03-13 19:12:36,088 - resume_updater - INFO - Found visible file input with selector: #attachCV
+2026-03-13 19:12:56,185 - resume_updater - INFO - Resume file upload completed (no explicit success message)
+2026-03-13 19:12:56,185 - scheduler - INFO - Resume upload completed successfully
+2026-03-13 19:12:56,214 - scheduler - INFO - Closing browser after resume upload
+2026-03-13 19:15:11,304 - __main__ - INFO - Reading resume from: resume/Pragati Potadar_Resume (1).pdf
+2026-03-13 19:15:11,408 - __main__ - INFO - Extracted 4130 characters from resume
+2026-03-13 19:15:11,412 - __main__ - INFO - Extracted 3 unique skills/keywords
+2026-03-13 19:15:11,412 - __main__ - INFO - Extracted 5 years of experience
+2026-03-13 19:15:11,413 - __main__ - INFO - Extracted 0 job titles
+2026-03-13 19:15:11,413 - __main__ - INFO - Reading resume from: resume/Pragati Potadar_Resume (1).pdf
+2026-03-13 19:15:11,501 - __main__ - INFO - Extracted 4130 characters from resume
+2026-03-13 19:15:11,504 - __main__ - INFO - Extracted 3 unique skills/keywords
+2026-03-13 19:15:11,504 - __main__ - INFO - Extracted 5 years of experience
+2026-03-13 19:15:11,505 - __main__ - INFO - Extracted 0 job titles
+2026-03-13 19:15:11,505 - __main__ - INFO - Generated 23 job search keywords
+2026-03-13 19:15:32,631 - resume_reader - INFO - Reading resume from: resume/Pragati Potadar_Resume (1).pdf
+2026-03-13 19:15:32,720 - resume_reader - INFO - Extracted 4130 characters from resume
+2026-03-13 19:16:37,748 - __main__ - INFO - Reading resume from: resume/Pragati Potadar_Resume (1).pdf
+2026-03-13 19:16:37,835 - __main__ - INFO - Extracted 4130 characters from resume
+2026-03-13 19:16:37,844 - __main__ - INFO - Extracted 21 unique skills/keywords: ['access control', 'business rules', 'client', 'knowledge management', 'sla', 'itsm administrator', 'workflows', 'user administration', 'knowledge', 'service']...
+2026-03-13 19:16:37,844 - __main__ - INFO - Extracted 5 years of experience
+2026-03-13 19:16:37,856 - __main__ - INFO - Extracted 9 job titles: ['Presen Ted\n \nWith', 'Process\n \nAnalyst', 'Servicenow ITSM Administrator', 'Process Analyst', 'Sr Analyst', 'Technology Process Specialist', 'India Pvt Ltd', '(?:Technology|Technical) Process Specialist', 'Servicenow Itsm Administrator']
+2026-03-13 19:16:37,857 - __main__ - INFO - Reading resume from: resume/Pragati Potadar_Resume (1).pdf
+2026-03-13 19:16:37,949 - __main__ - INFO - Extracted 4130 characters from resume
+2026-03-13 19:16:37,952 - __main__ - INFO - Extracted 21 unique skills/keywords: ['access control', 'business rules', 'client', 'knowledge management', 'sla', 'itsm administrator', 'workflows', 'user administration', 'knowledge', 'service']...
+2026-03-13 19:16:37,953 - __main__ - INFO - Extracted 5 years of experience
+2026-03-13 19:16:37,953 - __main__ - INFO - Generated 17 ServiceNow-focused search keywords
