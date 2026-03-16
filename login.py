@@ -50,6 +50,7 @@ class NaukriLogin:
             # Fill email - try multiple selectors
             logger.info("Filling email field")
             email_selectors = [
+                '#usernameField',
                 'input[placeholder*="email"]',
                 'input[placeholder*="Email"]',
                 'input[type="email"]',
