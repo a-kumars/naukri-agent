@@ -31,8 +31,9 @@ jobs:
       env:
         NAUKRI_EMAIL: ${{ secrets.NAUKRI_EMAIL }}
         NAUKRI_PASSWORD: ${{ secrets.NAUKRI_PASSWORD }}
-      run: python test_resume_upload.py
-      working-directory: .
+      run: |
+        cd naukri_agent
+        python test_resume_upload.py
 
     - name: Commit and push logs (optional)
       run: |
