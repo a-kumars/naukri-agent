@@ -66,6 +66,7 @@ if __name__ == "__main__":
     print("Press Ctrl+C to stop the scheduler")
     print()
 
+
     try:
         start_daily_scheduler()
     except KeyboardInterrupt:
